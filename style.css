@@ -1,0 +1,291 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-style:inherit ;
+    line-height: 1.6;
+    background-color: #000000;
+    color: #333;
+    padding-bottom: 50px;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  article h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  article .meta {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  article .featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  article section p {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  /* Navigasi artikel */
+  .article-navigation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .article-navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .article-navigation a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Komentar Modal */
+  .comment-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #e40000;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+  }
+  
+  .close-modal {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* Main content styling */
+  .container {
+    width: 80%; /* Menjaga lebar tetap */
+    margin: 40px auto;
+    display: flex; /* Menggunakan flexbox untuk mengatur artikel dan sidebar */
+    justify-content: space-between; /* Menjaga jarak antara artikel dan sidebar */
+    gap: 20px; /* Memberikan jarak kecil antara artikel dan sidebar */
+    align-items: flex-start; /* Mengatur keduanya sejajar di bagian atas */
+  }
+  
+  /* Artikel Styling */
+  .content {
+    flex: 1; /* Membuat artikel mengambil ruang yang tersisa */
+    color: white;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    padding: 20px;
+    width: 250px; /* Lebar sidebar tetap */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto; /* Membuat sidebar terpusat */
+  }
+  
+  /* Video YouTube di sidebar tanpa background, hanya pembatas garis */
+  .youtube-video {
+    border: 2px solid #ffffff; /* Menambahkan pembatas garis putih di sekitar video */
+    border-radius: 8px; /* Menambahkan sudut tumpul */
+    padding: 10px; /* Memberikan jarak antara pembatas dan video */
+    margin-bottom: 20px; /* Memberikan jarak antar video */
+  }
+  
+  /* Video YouTube iframe */
+  .youtube-video iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;  /* Menyesuaikan lebar iframe dengan sidebar */
+    height: 200px; /* Membuat video lebih kecil, semi-kotak */
+  }
+  
+  /* Responsif - Untuk perangkat kecil */
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Menata konten dalam satu kolom pada perangkat kecil */
+        gap: 20px; /* Memberikan jarak antara artikel dan sidebar */
+    }
+  
+    .sidebar {
+        width: 100%; /* Sidebar mengambil 100% lebar */
+    }
+  
+    .youtube-video iframe {
+        max-width: 100%; /* Tetap responsif */
+        height: 160px;  /* Mengurangi ukuran video lebih kecil lagi */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+        width: 100%; /* Sidebar tetap lebar penuh */
+    }
+  
+    .youtube-video iframe {
+        max-width: 150%; /* Mengatur lebar video sesuai kontainer */
+        height: 130px;  /* Lebih kecil lagi untuk layar ponsel */
+    }
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #4e4e4e;
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .footer-logo p{
+  color: #ebf6ff;
+  
+  }
+  
+  .footer-nav {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .nav-section {
+    flex: 1;
+  }
+  
+  .nav-section h5 {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .nav-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-section ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .nav-section ul li a {
+    text-decoration: none;
+    color: #ebf6ff;
+  }
+  
+  .nav-section ul li a:hover {
+    color: #007bff;
+  }
+  
+  .footer-disclaimer {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .footer-disclaimer p {
+    font-size: 17px;
+    color: #ebf6ff;
+  }
+  
+  .footer-disclaimer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer-disclaimer a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  h3{
+    color: white;
+  }
+  
+  
+  
+  
+  
+  
+  
